@@ -1,14 +1,16 @@
-import React from "react";
+import React, { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import SignInPage from "./pages/SignInPage";
 
-function App() {
+const SignUpPage = lazy(() => import("./pages/SignUpPage"));
+
+const App = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut
-      commodi distinctio ipsa nisi perspiciatis quisquam similique soluta
-      tempore? Explicabo hic iste nihil nostrum quo quos unde velit vitae
-      voluptatem?
-    </div>
+    <Routes>
+      <Route path="/sign-up" element={<SignUpPage />} />
+      <Route path="/sign-in" element={<SignInPage />} />
+    </Routes>
   );
-}
+};
 
 export default App;
