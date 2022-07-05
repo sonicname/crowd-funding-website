@@ -52,13 +52,15 @@ const SignUpPage = () => {
         </Link>
       </p>
 
-      <button className="flex items-center justify-center py-3 gap-x-3 w-full border border-strock rounded-xl text-text2 text-base font-semibold mb-4">
+      <button className="flex items-center justify-center py-3 gap-x-3 w-full border border-strock rounded-xl text-text2 text-base font-semibold mb-4 dark:text-white dark:border-darkStroke">
         <img srcSet="/google.png 2x" alt="icon-google" />
         <span>Sign up with google</span>
       </button>
-      <p className="text-center text-xs lg:text-sm font-normal mb-4 lg:mb-8 text-text2">
+
+      <p className="text-center text-xs lg:text-sm font-normal mb-4 lg:mb-8 text-text2 dark:text-white">
         Or sign up with email
       </p>
+
       <form onSubmit={handleSubmit(handleSignUp)}>
         <FormGroup>
           <Label htmlFor="name">Full Name *</Label>
@@ -93,7 +95,7 @@ const SignUpPage = () => {
         </FormGroup>
         <div className="flex items-start gap-x-5 mb-5">
           <Checkbox name="term" checked={acceptTerm} onClick={handleToggleTerm}>
-            <p className="text-xs lg:text-sm text-text2 flex-1">
+            <p className="text-xs lg:text-sm text-text2 flex-1 dark:text-text-3">
               I agree to the{' '}
               <span className="text-secondary underline">Terms of Use</span> and
               have read and understand the{' '}
