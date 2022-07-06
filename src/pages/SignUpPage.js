@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Label } from 'components/label';
 import { Input } from 'components/input';
 import { FormGroup } from 'components/common';
-import { Button } from 'components/button';
+import { Button, ButtonGoogle } from 'components/button';
 import { Checkbox } from 'components/checkbox';
 import { IconEyeToggle } from '../components/icons';
 
@@ -52,10 +52,7 @@ const SignUpPage = () => {
         </Link>
       </p>
 
-      <button className="flex items-center justify-center py-3 gap-x-3 w-full border border-strock rounded-xl text-text2 text-base font-semibold mb-4 dark:text-white dark:border-darkStroke">
-        <img srcSet="/google.png 2x" alt="icon-google" />
-        <span>Sign up with google</span>
-      </button>
+      <ButtonGoogle />
 
       <p className="text-center text-xs lg:text-sm font-normal mb-4 lg:mb-8 text-text2 dark:text-white">
         Or sign up with email

@@ -23,10 +23,10 @@ const Input = ({
       <input
         id={name}
         type={type}
-        className={`w-full py-4 px-6 border rounded-xl text-sm font-medium rounded-xl text-text1 placeholder:text-text4 ${
+        className={`w-full py-4 px-6 border rounded-xl text-sm font-medium rounded-xl placeholder:text-text4 ${
           error.length > 0
-            ? 'border-error'
-            : 'border-strock dark:border-darkStroke'
+            ? 'border-error text-error'
+            : 'border-strock text-text1 dark:border-darkStroke'
         } ${
           children ? 'pr-16' : ''
         } dark:bg-transparent dark:placeholder:text-text2 dark:text-white`}
