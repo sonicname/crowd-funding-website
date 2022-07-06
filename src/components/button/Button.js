@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { classNames } from '../../utils';
 
 const Button = ({
   type = 'button',
@@ -9,16 +10,19 @@ const Button = ({
   ...rest
 }) => {
   const child = !!isLoading ? (
-    <div className="mx-auto w-10 h-10 rounded-full border-4 border-white border-t-transparent border-b-transparent animate-spin"></div>
+    <div className="mx-auto w-10 h-10 rounded-full border-4 border-white border-t-transparent border-b-transparent animate-spin" />
   ) : (
     children
   );
+
   return (
     <button
       type={type}
-      className={`p-4 text-base text-white font-semibold rounded-xl min-h-[56px] select-none hover:opacity-80 duration-300 active:scale-90 ${className} ${
-        isLoading ? 'opacity-50 pointer-events-none' : ''
-      }`}
+      className={classNames(
+        'p-4 text-base text-white font-semibold rounded-xl min-h-[56px] select-none hover:opacity-80 duration-300 active:scale-90',
+        isLoading ? 'opacity-50 pointer-events-none' : '',
+        className
+      )}
       {...rest}>
       {child}
     </button>

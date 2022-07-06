@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { classNames } from '../../utils';
 
 const Label = ({ children, htmlFor = '', className = '' }) => {
   return (
     <label
       htmlFor={htmlFor}
-      className={`text-sm font-medium text-text2 cursor-pointer inline-block select-none ${className} dark:text-text3`}>
+      className={classNames(
+        'text-sm font-medium text-text2 cursor-pointer inline-block select-none dark:text-text3',
+        className
+      )}>
       {children}
     </label>
   );
