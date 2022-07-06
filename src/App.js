@@ -1,15 +1,17 @@
-import React, { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
-import SignInPage from "./pages/SignInPage";
+import React, { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-const SignUpPage = lazy(() => import("./pages/SignUpPage"));
+const SignUpPage = lazy(() => import('./pages/SignUpPage'));
+const SignInPage = lazy(() => import('./pages/SignInPage'));
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/sign-up" element={<SignUpPage />} />
-      <Route path="/sign-in" element={<SignInPage />} />
-    </Routes>
+    <Suspense fallback={<></>}>
+      <Routes>
+        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/sign-in" element={<SignInPage />} />
+      </Routes>
+    </Suspense>
   );
 };
 
