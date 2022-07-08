@@ -5,7 +5,7 @@ import DashBoardFund from './DashBoardFund';
 
 const DashBoardTopBar = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between mb-8">
       <div className="flex items-center gap-x-10 flex-1">
         <img srcSet="/logo.png 2x" alt="" />
         <div className="max-w-[458px] w-full">

@@ -4,9 +4,9 @@ import DashBoardSideBar from '../modules/dashboard/DashBoardSideBar';
 
 const LayoutDashBoard = ({ children }) => {
   return (
-    <div className="p-10 bg-lite">
+    <div className="p-10 bg-lite min-h-screen">
       <DashBoardTopBar />
-      <div>
+      <div className="flex items-start gap-x-10">
         <DashBoardSideBar />
         <div>{children}</div>
       </div>
